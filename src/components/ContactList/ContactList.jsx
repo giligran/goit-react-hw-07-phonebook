@@ -9,8 +9,6 @@ function ContactList() {
   const filter = useSelector(getFilter);
   const dispatch = useDispatch();
 
-  console.log(contacts);
-
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);

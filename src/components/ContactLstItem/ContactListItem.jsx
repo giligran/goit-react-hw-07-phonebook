@@ -1,10 +1,12 @@
 import { useDispatch } from 'react-redux';
-import { deleteContact } from 'redux/contactsSlice';
+import { deleteContact } from 'redux/operation';
 import { Button } from './ContactListItem.styled';
 
 function ContactListItem({ id, name, number }) {
   const dispatch = useDispatch();
+
   const handleDelete = () => dispatch(deleteContact(id));
+
   return (
     <li>
       {`${name}: ${number}`}
