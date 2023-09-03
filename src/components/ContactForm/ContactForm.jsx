@@ -12,8 +12,6 @@ export default function ContactForm() {
   const dispatch = useDispatch();
   const [contact, setContact] = useState({ name: '', number: '' });
 
-  console.log(items);
-
   const handleChange = event => {
     const { name, value } = event.target;
     setContact(prevContact => ({
